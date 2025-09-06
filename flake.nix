@@ -9,13 +9,31 @@
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
       # Replace "myhostname" with your actual hostname
-      nixos = nixpkgs.lib.nixosSystem {
+      desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux"; # or your system architecture
         modules = [
-          ./configuration.nix
-          # Add additional modules here if needed
+          ./hosts/desktop.nix
         ];
       };
+#      l14 = nixpkgs.lib.nixosSystem {
+#        system = "x86_64-linux";
+#        modules = [
+#          ./hosts/l14.nix
+#        ];
+#      };
+#      t430 = nixpkgs.lib.nixosSystem {
+#        system = "x86_64-linux";
+#        modules = [
+#          ./hosts/t430.nix
+#        ];
+#      };
+
     };
   };
 }
+
+
+
+
+
+
