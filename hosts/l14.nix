@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../hardware/l14-configuration.nix
+    ../hardware/l14-hardware.nix
     ../modules/programs.nix
     ../modules/services.nix
   ];
