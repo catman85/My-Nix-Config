@@ -11,9 +11,4 @@
     git
     # Add your common packages here
   ];
-
-  services = {
-    openssh.enable = true;
-    # Other shared services
-  };
 }
