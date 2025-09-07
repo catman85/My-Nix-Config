@@ -2,13 +2,78 @@
 
 {
 
-  # Install firefox.
   programs.firefox.enable = true;
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
     wget
     git
-    # Add your common packages here
+#    kitty
+# 	cmatrix
+# 	neofetch
+# 	jetbrains.webstorm
+# 	git
+# 	vscode
+# 	chezmoi
+# 	cowsay
+# 	nmap
+# 	htop
+# 	chromium
+# 	oh-my-zsh
+# 	lsd
+# 	broot
+# 	thefuck
+# 	ruby
+# 	mcfly
+# 	fzf
+# 	bat
+# 	nodejs_22
+# 	cowsay
+# 	pipes
+# 	toilet
+# 	fortune
+# 	cava
+# 	rig
+# 	metasploit
+# 	lolcat
+# 	figlet
+# 	gtop
+# 	qalculate-qt
+# 	reaper
+# 	vlc
+# 	qemu
+# 	quickemu
+# 	libsForQt5.filelight
+# 	transmission_4-qt
+# 	usbutils
+# 	blueman
+# 	btop
+# 	fprintd
+# 	xsel
+# 	ripgrep
+# 	# support both 32-bit and 64-bit applications
+#     wineWowPackages.stable
+#     lm_sensors
+#     openvpn
+#     dig
+#     compose2nix
+#     jq #needed by openrouter ai sh
+#     tor-browser
+#     # Custom QEMU UEFI wrapper
+#     (writeShellScriptBin "qemu-system-x86_64-uefi" ''
+#       ${qemu}/bin/qemu-system-x86_64 \
+#         -bios ${OVMF.fd}/FV/OVMF.fd \
+#         "$@"
+#     '')
+#     python313
+#     python313Packages.virtualenv #tool to create isolated python environments
+#     python313Packages.pip # pip tool
+#     ffmpeg-full
+#     trashy
+#     unzip # needed by broot
   ];
 }
