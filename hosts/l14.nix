@@ -3,8 +3,10 @@
 {
   imports = [
     ../hardware/l14-hardware.nix
-    ../modules/programs.nix
-    ../modules/services.nix
+    ../modules/shared-programs.nix
+    ../modules/shared-services.nix
+    ../modules/l14/programs.nix
+    ../modules/l14/services.nix
   ];
 
   networking.hostName = "l14";

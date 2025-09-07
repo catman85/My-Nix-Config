@@ -3,8 +3,10 @@
 {
   imports = [
     ../hardware/desktop-hardware.nix
-    ../modules/programs.nix
-    ../modules/services.nix
+    ../modules/shared-programs.nix
+    ../modules/shared-services.nix
+    ../modules/desktop/programs.nix
+    ../modules/desktop/services.nix
   ];
 
   # Bootloader.
