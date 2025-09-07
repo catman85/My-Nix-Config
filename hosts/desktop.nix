@@ -61,8 +61,6 @@
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -72,7 +70,9 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
+  # enable bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
