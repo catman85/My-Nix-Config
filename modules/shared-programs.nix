@@ -74,5 +74,7 @@
     trashy
     unzip # needed by broot
     flameshot
+	nodenv
+	github-desktop
   ];
 }
