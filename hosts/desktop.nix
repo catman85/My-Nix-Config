@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../hardware/desktop-hardware.nix
+    ../hardware/desktop.hardware.nix
     ../modules/shared-programs.nix
     ../modules/shared-services.nix
     ../modules/desktop/programs.nix

@@ -8,7 +8,6 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
-      # Replace "desktop" with your actual hostname
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux"; # or your system architecture
         modules = [

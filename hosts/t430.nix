@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../hardware/t430-hardware.nix
+    ../hardware/t430.hardware.nix
     ../modules/shared-programs.nix
     ../modules/shared-services.nix
     ../modules/t430/programs.nix
