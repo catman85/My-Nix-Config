@@ -8,7 +8,7 @@ To install this setup:
 # Here we are generating our desktop machine
 nixos-generate-config --dir ~/nixos-config/hardware/desktop.hardware.nix
 ```
-> Make sure the name of the hardware file matches what is specified inside the hosts folder. The hardware file is generated and is therefore not tracked by git
+> Make sure the name of the hardware file matches what is specified inside the hosts folder. The hardware file is generated, however nixos needs to track it in git, in order to recognize it.
 
 3. Rebuild your system to the new config.
 ```sh
