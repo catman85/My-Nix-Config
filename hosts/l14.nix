@@ -51,7 +51,7 @@
   users.users.jim = {
     isNormalUser = true;
     description = "jim";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "podman"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -85,35 +85,35 @@
   };
 
 
-users.groups.libvirtd.members = ["jim"];
-virtualisation.libvirtd.enable = true;
-virtualisation.spiceUSBRedirection.enable = true;
+  users.groups.libvirtd.members = ["jim"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
-# Enable Podman in configuration.nix
-virtualisation.podman = {
-  enable = true;
-  # Create the default bridge network for podman
-  defaultNetwork.settings.dns_enabled = true;
-};
-
-# Optionally, create a Docker compatibility alias
-programs.zsh.shellAliases = {
-  docker = "podman";
-};
-
-virtualisation.docker = {
-  # Consider disabling the system wide Docker daemon
-  enable = true;
-  # Use the rootless mode - run Docker daemon as non-root user
-  rootless = {
+  # Enable Podman in configuration.nix
+  virtualisation.podman = {
     enable = true;
-    setSocketVariable = true;
+    # Create the default bridge network for podman
+    defaultNetwork.settings.dns_enabled = true;
   };
-};
 
-boot.kernel.sysctl = {
-  "net.ipv4.conf.eth0.forwarding" = 1;    # enable port forwarding
-};
+  # Optionally, create a Docker compatibility alias
+  programs.zsh.shellAliases = {
+    docker = "podman";
+  };
+
+  virtualisation.docker = {
+    # Consider disabling the system wide Docker daemon
+    enable = true;
+    # Use the rootless mode - run Docker daemon as non-root user
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
+  boot.kernel.sysctl = {
+    "net.ipv4.conf.eth0.forwarding" = 1;    # enable port forwarding
+  };
 
   system.activationScripts.nanorc-symlink = ''
     ln -sf /home/jim/.nanorc /etc/nanorc
