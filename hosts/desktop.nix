@@ -48,7 +48,7 @@
   users.users.jim = {
     isNormalUser = true;
     description = "jim";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -73,6 +73,29 @@
   # enable bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+  virtualisation.docker = {
+    # Consider disabling the system wide Docker daemon
+    enable = false;
+
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
+
+  # Enable Podman in configuration.nix
+  virtualisation.podman = {
+    enable = true;
+    # Create the default bridge network for podman
+    defaultNetwork.settings.dns_enabled = true;
+  };
+
+  # Optionally, create a Docker compatibility alias
+  programs.zsh.shellAliases = {
+    docker = "podman";
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
