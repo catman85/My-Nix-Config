@@ -48,7 +48,7 @@
   users.users.jim = {
     isNormalUser = true;
     description = "jim";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "podman" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -83,7 +83,6 @@
       setSocketVariable = true;
     };
   };
-
 
   # Enable Podman in configuration.nix
   virtualisation.podman = {
