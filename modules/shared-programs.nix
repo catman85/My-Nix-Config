@@ -13,13 +13,14 @@
   users.groups.libvirtd.members = ["jim"];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-  
+
   # List packages installed in system profile. To search, run:
   # $ nix search nixpkgs 'lm_sensors'
   environment.systemPackages = with pkgs; [
     vim
     wget
     git
+	diff-so-fancy
     kitty
 	yarn
 	cmatrix
