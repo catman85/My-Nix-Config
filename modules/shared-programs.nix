@@ -9,6 +9,11 @@
   # provides a compatibility layer that allows running uncompiled binaries on NixOS by making the necessary libraries available. 
   programs.nix-ld.enable = true;
 
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["jim"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+  
   # List packages installed in system profile. To search, run:
   # $ nix search nixpkgs 'lm_sensors'
   environment.systemPackages = with pkgs; [
