@@ -4,7 +4,7 @@ To install this setup:
 
 1. Clone this repo in your home folder under ```~/nix-config/```
 ```sh
-git clone https://github.com/catman85/My-Nix-Config.git
+git clone git@github.com:catman85/My-Nix-Config.git
 ```
 2. Generate your hardware config, and match the filename with whatever is specified inside ```hosts/*.nix``` file
 ```sh
