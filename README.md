@@ -16,6 +16,6 @@ nixos-generate-config --dir ~/nixos-config/hardware/desktop.hardware.nix
 3. Rebuild your system to the new config.
 ```sh
 # We select the desktop output from the flake.nix file
-sudo nixos-rebuild switch --flake ~/nix-config#desktop
+sudo nixos-rebuild switch --flake ~/My-Nix-Config#desktop
 ```
 This command will trigger the entry point ```~/nix-config/flake.nix``` and run the specified output (#desktop in our case).
