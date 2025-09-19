@@ -16,13 +16,13 @@
           ./hosts/desktop.nix
         ];
       };
-#      l14 = nixpkgs.lib.nixosSystem {
-#        system = "x86_64-linux";
-#        modules = [
-#           nix-flatpak.nixosModules.nix-flatpak
-#          ./hosts/l14.nix
-#        ];
-#      };
+      l14 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+           nix-flatpak.nixosModules.nix-flatpak
+          ./hosts/l14.nix
+        ];
+      };
 #      t430 = nixpkgs.lib.nixosSystem {
 #        system = "x86_64-linux";
 #        modules = [

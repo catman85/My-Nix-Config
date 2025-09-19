@@ -17,9 +17,6 @@
       "com.viber.Viber"
     ];
 
-    # User-specific packages (in home-manager)
-    # packages = ["com.discordapp.Discord"];
-
     update.onActivation = true;
     uninstallUnmanaged = false;
   };

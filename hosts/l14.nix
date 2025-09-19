@@ -115,10 +115,6 @@
     "net.ipv4.conf.eth0.forwarding" = 1;    # enable port forwarding
   };
 
-  system.activationScripts.nanorc-symlink = ''
-    ln -sf /home/jim/.nanorc /etc/nanorc
-  '';
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
