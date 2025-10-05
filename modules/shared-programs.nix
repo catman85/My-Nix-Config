@@ -21,6 +21,7 @@
     wget
     git
 	diff-so-fancy
+	fastfetch
     kitty
 	yarn
 	cmatrix

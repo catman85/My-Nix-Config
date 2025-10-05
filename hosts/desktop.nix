@@ -10,8 +10,24 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # defaults
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+  # custom
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot"; # or "/boot/efi" if mounted separately
+    };
+    grub = {
+      enable = true;
+      device = "nodev"; # Use for UEFI systems
+      efiSupport = true;
+      useOSProber = true; # Automatically find Windows and other OSes
+      default = "saved"; # Uncomment to remember last boot choice
+    };
+  };
+  boot.loader.timeout = 10; # Uncomment and set your desired timeout
 
   networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
