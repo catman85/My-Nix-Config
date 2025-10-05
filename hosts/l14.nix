@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # the boot menu won’t show up at all unless you’re holding down the space bar during boot
-  # boot.loader.timeout = 0;
+  boot.loader.timeout = 0;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -114,10 +114,6 @@
   boot.kernel.sysctl = {
     "net.ipv4.conf.eth0.forwarding" = 1;    # enable port forwarding
   };
-
-  system.activationScripts.nanorc-symlink = ''
-    ln -sf /home/jim/.nanorc /etc/nanorc
-  '';
 
   # List services that you want to enable:
 

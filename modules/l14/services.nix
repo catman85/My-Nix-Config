@@ -5,7 +5,7 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-    # Enable the KDE Plasma Desktop Environment.
+  # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -39,20 +39,20 @@
     #media-session.enable = true;
   };
 
-    services.samba = {
-        enable=false;
-        openFirewall = true;
-        settings={
-            "qemu_share"={
-                "path" = "/home/jim/Downloads";
-                "valid users" = "jim";
-                "read only" = "no";
-                "guest ok" = "no";
-            };
-        };
-    };
+  services.samba = {
+      enable=false;
+      openFirewall = true;
+      settings={
+          "qemu_share"={
+              "path" = "/home/jim/Downloads";
+              "valid users" = "jim";
+              "read only" = "no";
+              "guest ok" = "no";
+          };
+      };
+  };
 
-    # enables fingerprint support for thinkpad 06cb:00bd Synaptics Sensors
+  # enables fingerprint support for thinkpad 06cb:00bd Synaptics Sensors
   # broken in 25.05
   services.fprintd.enable = true;
   services.fprintd.tod.enable = true;
