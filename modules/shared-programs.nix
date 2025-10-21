@@ -27,6 +27,7 @@
 	cmatrix
 	neofetch
 	jetbrains.webstorm
+	jetbrains.pycharm-professional
 	vscode
 	chezmoi
 	cowsay
