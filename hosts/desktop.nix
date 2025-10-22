@@ -64,7 +64,7 @@
   users.users.jim = {
     isNormalUser = true;
     description = "jim";
-    extraGroups = [ "networkmanager" "wheel" "docker" "podman" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "podman" "input"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird

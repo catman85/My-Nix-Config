@@ -5,6 +5,8 @@ let
 in
 
 {
+  programs.ydotool.enable = true;
+
   environment.systemPackages = with pkgs; [
     claude-desktop-fhs 
     lm_sensors
