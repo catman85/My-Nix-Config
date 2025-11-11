@@ -18,11 +18,11 @@
   # $ nix search nixpkgs 'lm_sensors'
   environment.systemPackages = with pkgs; [
     vim
-    wget
-    git
+	wget
+	git
 	diff-so-fancy
 	fastfetch
-    kitty
+	kitty
 	yarn
 	cmatrix
 	neofetch
@@ -52,7 +52,6 @@
 	metasploit
 	lolcat
 	figlet
-	android-studio
 	gtop
 	qalculate-qt
 	reaper

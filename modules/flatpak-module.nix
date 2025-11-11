@@ -15,6 +15,7 @@
     packages = [
       "com.simplenote.Simplenote"
       "com.viber.Viber"
+      "com.google.AndroidStudio"
     ];
 
     update.onActivation = true;
