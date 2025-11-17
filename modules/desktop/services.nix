@@ -14,6 +14,19 @@
     layout = "us";
     variant = "";
   };
+  
+  services.samba = {
+      enable=false;
+      openFirewall = true;
+      settings={
+          "qemu_share"={
+              "path" = "/home/jim/Downloads";
+              "valid users" = "jim";
+              "read only" = "no";
+              "guest ok" = "no";
+          };
+      };
+  };
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
