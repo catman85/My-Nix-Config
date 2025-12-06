@@ -18,6 +18,7 @@
   # $ nix search nixpkgs 'lm_sensors'
   environment.systemPackages = with pkgs; [
     vim
+    postman
 	wget
 	git
 	diff-so-fancy
