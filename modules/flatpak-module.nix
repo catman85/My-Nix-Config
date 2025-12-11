@@ -13,7 +13,6 @@
 
     # System-wide packages
     packages = [
-      "com.simplenote.Simplenote"
       "com.viber.Viber"
       "com.google.AndroidStudio"
     ];
