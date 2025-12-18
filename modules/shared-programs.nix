@@ -8,7 +8,10 @@
 
   # provides a compatibility layer that allows running uncompiled binaries on NixOS by making the necessary libraries available. 
   programs.nix-ld.enable = true;
-
+  programs.gnupg.agent = {
+    enable = true; # Enables the gpg-agent service
+    enableSSHSupport = false; # Optional: Allows using GPG keys for SSH
+  };
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["jim"];
   virtualisation.libvirtd.enable = true;
