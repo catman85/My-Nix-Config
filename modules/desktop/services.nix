@@ -16,7 +16,7 @@
   };
   
   services.samba = {
-      enable=false;
+      enable=true;
       openFirewall = true;
       settings={
           "qemu_share"={

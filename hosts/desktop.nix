@@ -27,8 +27,8 @@
       default = "saved"; # Uncomment to remember last boot choice
     };
   };
-  boot.loader.timeout = 2; # Uncomment and set your desired timeout
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.loader.timeout = 3; # Uncomment and set your desired timeout
+  # boot.kernelPackages = pkgs.linuxPackages_latest; # Latest kernel may introduce bugs
 
   networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

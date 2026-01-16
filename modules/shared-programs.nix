@@ -26,9 +26,9 @@
 	kitty
 	yarn
 	cmatrix
-	neofetch
+	fastfetch
 	jetbrains.webstorm
-	jetbrains.pycharm-professional
+	jetbrains.pycharm
 	vscode
 	chezmoi
 	cowsay
@@ -59,7 +59,7 @@
 	qemu
 	quickemu
 	kdePackages.filelight
-	transmission_4-qt
+	qbittorrent
 	usbutils
 	blueman
 	btop
