@@ -38,7 +38,6 @@
 	oh-my-zsh
 	lsd
 	broot
-	thefuck
 	ruby
 	mcfly
 	fzf
@@ -59,7 +58,7 @@
 	vlc
 	qemu
 	quickemu
-	libsForQt5.filelight
+	kdePackages.filelight
 	transmission_4-qt
 	usbutils
 	blueman
