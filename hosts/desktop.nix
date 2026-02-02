@@ -29,6 +29,7 @@
   };
   boot.loader.timeout = 3; # Uncomment and set your desired timeout
   # boot.kernelPackages = pkgs.linuxPackages_latest; # Latest kernel may introduce bugs
+  boot.kernelPackages = pkgs.linuxPackages_6_12; # Bug versions not supported
 
   networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -14,19 +14,6 @@
     layout = "us";
     variant = "";
   };
-  
-  services.samba = {
-      enable=true;
-      openFirewall = true;
-      settings={
-          "qemu_share"={
-              "path" = "/home/jim/Downloads";
-              "valid users" = "jim";
-              "read only" = "no";
-              "guest ok" = "no";
-          };
-      };
-  };
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -42,6 +29,19 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
+  };
+
+  services.samba = {
+      enable=false;
+      openFirewall = true;
+      settings={
+          "qemu_share"={
+              "path" = "/home/jim/Downloads";
+              "valid users" = "jim";
+              "read only" = "no";
+              "guest ok" = "no";
+          };
+      };
   };
 
 }
