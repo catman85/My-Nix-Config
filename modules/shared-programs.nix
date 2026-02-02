@@ -59,6 +59,7 @@
 	qemu
 	quickemu
 	kdePackages.filelight
+	kdePackages.kzones
 	qbittorrent
 	usbutils
 	blueman
