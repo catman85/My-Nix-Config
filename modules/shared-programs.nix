@@ -87,7 +87,8 @@
     trashy
     unzip # needed by broot
     flameshot
-	github-desktop
-	distrobox
+    kooha
+    github-desktop
+    distrobox
   ];
 }
