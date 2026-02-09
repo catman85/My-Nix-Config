@@ -19,6 +19,7 @@
   environment.systemPackages = with pkgs; [
     vim
     postman
+    	qjackctl
 	wget
 	git
 	diff-so-fancy
