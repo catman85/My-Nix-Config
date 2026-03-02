@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
+
+let
+  freshPkg = inputs.fresh.packages.${pkgs.system}.default;
+in
 
 {
 
@@ -19,6 +23,7 @@
   environment.systemPackages = with pkgs; [
     vim
     postman
+    freshPkg # rich text editor
     	qjackctl
 	wget
 	git

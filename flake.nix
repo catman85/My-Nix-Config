@@ -4,8 +4,11 @@
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    
+    # External flakes
     nix-flatpak.url = "github:gmodena/nix-flatpak"; 
     claude-desktop.url = "github:k3d3/claude-desktop-linux-flake";
+    fresh.url = "github:sinelaw/fresh";
   };
 
   outputs = { self, nixpkgs, nix-flatpak, ... }@inputs: {
@@ -20,6 +23,7 @@
       };
       l14 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; }; 
         modules = [
            nix-flatpak.nixosModules.nix-flatpak
           ./hosts/l14.nix
@@ -27,6 +31,7 @@
       };
 #      t430 = nixpkgs.lib.nixosSystem {
 #        system = "x86_64-linux";
+#        specialArgs = { inherit inputs; }; 
 #        modules = [
 #           nix-flatpak.nixosModules.nix-flatpak
 #          ./hosts/t430.nix
