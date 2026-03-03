@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     lm_sensors
+    jetbrains.clion
   ];
 
   programs.steam = {
