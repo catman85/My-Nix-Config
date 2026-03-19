@@ -5,6 +5,7 @@ let
 in
 
 {
+  nixpkgs.config.allowUnfree = true;
   programs.ydotool.enable = true;
 
   environment.systemPackages = with pkgs; [
