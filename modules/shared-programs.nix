@@ -91,6 +91,9 @@ in
     python313Packages.pip # pip tool
     ffmpeg-full
     trashy
+    fd # alternative to find
+    filezilla
+    unixtools.ifconfig
     unzip # needed by broot
     flameshot
     kooha
