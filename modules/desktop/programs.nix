@@ -6,10 +6,22 @@ in
 
 {
   nixpkgs.config.allowUnfree = true;
-  programs.ydotool.enable = true;
 
   environment.systemPackages = with pkgs; [
     claude-desktop-fhs 
-    lm_sensors
+    lm_sensors	
+    jetbrains.clion
+    jetbrains.webstorm
+    jetbrains.pycharm
+    reaper
+    qemu
+    quickemu
+    tor-browser
+    github-desktop
+    distrobox
+    python313
+    python313Packages.virtualenv #tool to create isolated python environments
+    python313Packages.pip # pip tool
+    nodejs_22
   ];
 }

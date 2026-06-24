@@ -21,10 +21,12 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search nixpkgs 'lm_sensors'
   environment.systemPackages = with pkgs; [
-    vim
-    postman
-    freshPkg # rich text editor
-    	qjackctl
+	vim
+	postman
+	freshPkg # rich text editor
+	file # shows type of file
+	fileinfo
+	qjackctl
 	wget
 	git
 	diff-so-fancy
@@ -33,13 +35,11 @@ in
 	yarn
 	cmatrix
 	fastfetch
-	jetbrains.webstorm
-	jetbrains.pycharm
 	vscode
 	chezmoi
 	cowsay
+	metasploit
 	nmap
-	htop
 	chromium
 	oh-my-zsh
 	lsd
@@ -48,56 +48,45 @@ in
 	mcfly
 	fzf
 	bat
-	nodejs_22
 	cowsay
 	pipes
 	toilet
 	fortune
 	cava
 	rig
-	metasploit
 	lolcat
-	figlet
-	gtop
+	figlet # cool terminal text
+	btop
+	htop
 	qalculate-qt
-	reaper
 	vlc
-	qemu
-	quickemu
 	kdePackages.filelight
 	kdePackages.kzones
 	qbittorrent
 	usbutils
 	blueman
-	btop
 	fprintd
 	xsel
 	ripgrep
 	# support both 32-bit and 64-bit applications
-    wineWowPackages.stable
-    openvpn
-    dig
-    compose2nix
-    jq #needed by openrouter ai sh
-    tor-browser
-    # Custom QEMU UEFI wrapper
-    (writeShellScriptBin "qemu-system-x86_64-uefi" ''
-      ${qemu}/bin/qemu-system-x86_64 \
-        -bios ${OVMF.fd}/FV/OVMF.fd \
-        "$@"
-    '')
-    python313
-    python313Packages.virtualenv #tool to create isolated python environments
-    python313Packages.pip # pip tool
-    ffmpeg-full
-    trashy
-    fd # alternative to find
-    filezilla
-    unixtools.ifconfig
-    unzip # needed by broot
-    flameshot
-    kooha
-    github-desktop
-    distrobox
+	wineWowPackages.stable
+	openvpn
+	dig
+	compose2nix
+	jq #needed by openrouter ai sh
+	# Custom QEMU UEFI wrapper
+	(writeShellScriptBin "qemu-system-x86_64-uefi" ''
+		${qemu}/bin/qemu-system-x86_64 \
+		-bios ${OVMF.fd}/FV/OVMF.fd \
+		"$@"
+	'')
+	ffmpeg-full
+	trashy
+	fd # alternative to find
+	filezilla
+	unixtools.ifconfig
+	unzip # needed by broot
+	flameshot
+	kooha # screen recorder
   ];
 }
