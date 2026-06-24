@@ -9,6 +9,7 @@ in
 
   environment.systemPackages = with pkgs; [
     claude-desktop-fhs 
+    claude-code
     lm_sensors	
     jetbrains.clion
     jetbrains.webstorm
