@@ -24,5 +24,6 @@ in
     python313Packages.virtualenv #tool to create isolated python environments
     python313Packages.pip # pip tool
     nodejs_22
+    gimp
   ];
 }
