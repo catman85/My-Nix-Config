@@ -8,6 +8,7 @@ in
 
   programs.firefox.enable = true;
   programs.zsh.enable = true;
+  programs.zsh.enableCompletion = false; # zsh-autocomplete needs this
   users.defaultUserShell = pkgs.zsh;
 
   # provides a compatibility layer that allows running uncompiled binaries on NixOS by making the necessary libraries available. 
