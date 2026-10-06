@@ -30,6 +30,9 @@
   boot.loader.timeout = 3; # Uncomment and set your desired timeout
   # boot.kernelPackages = pkgs.linuxPackages_latest; # Latest kernel may introduce bugs
   boot.kernelPackages = pkgs.linuxPackages_6_12; # Bug versions not supported
+  boot.extraModprobeConfig = ''
+    options kvm ignore_msrs=1 report_ignored_msrs=0
+  ''; # macOS KVM
 
   networking.hostName = "desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -66,7 +69,7 @@
   users.users.jim = {
     isNormalUser = true;
     description = "jim";
-    extraGroups = [ "networkmanager" "wheel" "docker" "podman" "input" "adbusers" "kvm"];
+    extraGroups = [ "networkmanager" "wheel" "docker" "podman" "input" "adbusers" "kvm" "libvirtd"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird

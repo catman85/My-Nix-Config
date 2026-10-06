@@ -15,7 +15,6 @@ in
     jetbrains.webstorm
     jetbrains.pycharm
     reaper
-    qemu
     quickemu
     tor-browser
     github-desktop
@@ -25,5 +24,11 @@ in
     python313Packages.pip # pip tool
     nodejs_22
     gimp
+
+    # for macOS KVM
+    qemu_kvm          # qemu-system
+    guestfs-tools     # libguestfs-tools (virt-* commands)
+    tesseract         # tesseract-ocr + tesseract-ocr-eng
+    # end for macOS KVM
   ];
 }

@@ -15,8 +15,8 @@ in
   programs.nix-ld.enable = true;
 
   programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = ["jim"];
   virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.qemu.package = pkgs.qemu_kvm;
   virtualisation.spiceUSBRedirection.enable = true;
 
   # List packages installed in system profile. To search, run:
@@ -89,5 +89,11 @@ in
 	unzip # needed by broot
 	flameshot
 	kooha # screen recorder
+	tunctl            # uml-utilities (tunctl)
+    p7zip             # p7zip-full
+    gnumake           # make  
+    cdrkit            # genisoimage
+    nettools          # net-tools
+    screen
   ];
 }

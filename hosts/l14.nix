@@ -16,6 +16,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # the boot menu won’t show up at all unless you’re holding down the space bar during boot
   boot.loader.timeout = 0;
+  boot.extraModprobeConfig = ''
+    options kvm ignore_msrs=1 report_ignored_msrs=0
+  ''; # macOS KVM ignoring model specific registers
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -51,7 +54,7 @@
   users.users.jim = {
     isNormalUser = true;
     description = "jim";
-    extraGroups = [ "networkmanager" "wheel" "docker" "podman" "input" "adbusers" "kvm"];
+    extraGroups = [ "networkmanager" "wheel" "docker" "podman" "input" "adbusers" "kvm" "libvirtd"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -82,11 +85,6 @@
   	enable = true;
   	enable32Bit = true;
   };
-
-
-  users.groups.libvirtd.members = ["jim"];
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
 
   # Enable Podman in configuration.nix
   virtualisation.podman = {
