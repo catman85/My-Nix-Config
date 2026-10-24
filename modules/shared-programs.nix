@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 let
-  freshPkg = inputs.fresh.packages.${pkgs.system}.default;
+  freshPkg = inputs.fresh.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 
 {
@@ -69,8 +69,7 @@ in
 	fprintd
 	xsel
 	ripgrep
-	# support both 32-bit and 64-bit applications
-	wineWowPackages.stable
+	wineWow64Packages.stable
 	openvpn
 	dig
 	compose2nix

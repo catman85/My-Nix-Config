@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 let
-  claude-desktop-fhs = inputs.claude-desktop.packages.${pkgs.system}.claude-desktop-with-fhs;
+  claude-desktop-fhs = import ../../pkgs/claude-desktop-fhs.nix { inherit pkgs inputs; };
 in
 
 {
