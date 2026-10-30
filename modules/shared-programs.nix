@@ -24,7 +24,7 @@ in
   environment.systemPackages = with pkgs; [
 	vim
 	postman
-	freshPkg # rich text editor
+	#freshPkg # rich text editor
 	file # shows type of file
 	fileinfo
 	qjackctl

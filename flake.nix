@@ -32,15 +32,14 @@
           ./hosts/l14.nix
         ];
       };
-#      t430 = nixpkgs.lib.nixosSystem {
-#        system = "x86_64-linux";
-#        specialArgs = { inherit inputs; }; 
-#        modules = [
-#           nix-flatpak.nixosModules.nix-flatpak
-#          ./hosts/t430.nix
-#        ];
-#      };
-
+      t430 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; }; 
+        modules = [
+           nix-flatpak.nixosModules.nix-flatpak
+          ./hosts/t430.nix
+        ];
+      };
     };
   };
 }
